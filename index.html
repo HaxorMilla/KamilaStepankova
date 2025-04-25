@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moje Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #f4f4f4; background: #121212; }
+    a { color: #1abc9c; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* Navigation */
+    nav { position: fixed; width: 100%; background: rgba(0,0,0,0.7); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; z-index: 100; }
+    nav .logo { font-size: 1.5rem; font-weight: 700; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 1.5rem; }
+
+    /* Hero Section */
+    #hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 0 2rem; }
+    #hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    #hero p { font-size: 1.25rem; max-width: 600px; }
+
+    /* Sections */
+    section { padding: 4rem 2rem; }
+    .container { max-width: 1000px; margin: 0 auto; }
+
+    /* About */
+    #about img { border-radius: 50%; width: 200px; margin-bottom: 1rem; }
+    #about p { margin-top: 1rem; }
+
+    /* Projects */
+    #projects .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    .project { background: #1e1e1e; padding: 1rem; border-radius: 8px; }
+    .project h3 { margin-bottom: 0.5rem; }
+
+    /* Contact */
+    #contact form { display: flex; flex-direction: column; }
+    #contact input, #contact textarea { padding: 0.75rem; margin-bottom: 1rem; border: none; border-radius: 4px; }
+    #contact button { padding: 0.75rem; border: none; border-radius: 4px; background: #1abc9c; color: #121212; font-weight: bold; cursor: pointer; }
+    #contact button:hover { opacity: 0.9; }
+
+    /* Footer */
+    footer { text-align: center; padding: 2rem; background: #0d0d0d; }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">MojeJméno</div>
+    <ul>
+      <li><a href="#hero">Domů</a></li>
+      <li><a href="#about">O mně</a></li>
+      <li><a href="#projects">Projekty</a></li>
+      <li><a href="#contact">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <h1>Ahoj, jsem MojeJméno</h1>
+    <p>Jsem webový vývojář specializující se na moderní a responzivní řešení. Podívej se na moje projekty níže!</p>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container" style="text-align:center;">
+      <img src="profile.jpg" alt="Fotografie">
+      <h2>O mně</h2>
+      <p>Krátký popis o vás – zkušenosti, vzdělání, dovednosti, technologie, se kterými pracujete...</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projekty</h2>
+      <div class="grid">
+        <div class="project">
+          <h3>Projekt 1</h3>
+          <p>Popis projektu. Technologie a odkaz.</p>
+        </div>
+        <div class="project">
+          <h3>Projekt 2</h3>
+          <p>Popis projektu. Technologie a odkaz.</p>
+        </div>
+        <!-- Přidejte další projekty -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <h2>Kontakt</h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Vaše jméno" required>
+        <input type="email" name="email" placeholder="Váš email" required>
+        <textarea name="message" rows="5" placeholder="Vaše zpráva" required></textarea>
+        <button type="submit">Odeslat</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MojeJméno. Všechna práva vyhrazena.</p>
+  </footer>
+</body>
+</html>
